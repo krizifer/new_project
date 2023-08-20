@@ -18,6 +18,7 @@ let toggleStyle = () => {
     color: "black",
     backgroundColor: "white",
     icon : "bx bx-moon"
+
     })
     setBtnText('dark mode') 
   }else{
@@ -31,6 +32,8 @@ let toggleStyle = () => {
       setBtnText("light mode")
     };
   }
+
+  
    
   return (
       <div className='container' style = {myStyle} >
