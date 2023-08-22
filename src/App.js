@@ -3,9 +3,17 @@ import './App.css';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
 import Todo from './components/Todo';
+import About from './components/About';
 
-//import About from './components/About';
 import React, { useState } from 'react'; //imrs
+
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
+
+
 
 function App() {
   const [mode, setMode] = useState('light');//whether u want dark or light theme
@@ -52,17 +60,23 @@ function App() {
 
   return (
    <>
-   <Navbar title= "TextUtils" mode = {mode} toggleMode={toggleMode} />
-   <Alert alert= {alert}/>
+   <Router>
+      <Navbar title= "TextUtils" mode = {mode} toggleMode={toggleMode} />
+      <Alert alert= {alert}/>
 
-   {/* <div className="container my-3">
-   <TextForm showAlert={showAlert} heading='Enter the text ' mode = {mode}/> */}
-   
-   {/* <About/> */}
-   {/* </div> */}
-   <div>
-    <Todo/>
-   </div>
+      {/* THIS IS THE LEARING TASK OF REACT JS  */}
+      <div className="container my-3">
+        {/* USE EXACT PATH INSTEAD OF PATH WHILE ROUTING */}
+        {/* SWITCH HAS BEEN REPLACED BY ROUTES ALWAYS REMEMBER */}
+      <Routes>
+      <Route exact path="/about" element={<About />} />  
+      <Route exact path="/" element={<TextForm showAlert={showAlert} heading='Enter the text ' mode = {mode}/>} />
+      {/* THIS ONE IS THE EXTRA ASSIGNMENT FROM SUMIT SIR >>>> */}
+      <Route exact path="/todo" element={<Todo/>}/>  
+      </Routes>
+      
+      </div>
+   </Router>
 
    </>
   );
