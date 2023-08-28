@@ -4,6 +4,7 @@ import TextForm from './components/TextForm';
 import Alert from './components/Alert';
 import Todo from './components/Todo';
 import About from './components/About';
+import Jokes from './components/Jokes'
 
 import React, { useState } from 'react'; //imrs
 
@@ -69,12 +70,14 @@ function App() {
         {/* USE EXACT PATH INSTEAD OF PATH WHILE ROUTING */}
         {/* SWITCH HAS BEEN REPLACED BY ROUTES ALWAYS REMEMBER */}
       <Routes>
-      <Route exact path="/about" element={<About />} />  
+      <Route exact path="/about" element={<About mode = {mode} />} />  
       <Route exact path="/" element={<TextForm showAlert={showAlert} heading='Enter the text ' mode = {mode}/>} />
       {/* THIS ONE IS THE EXTRA ASSIGNMENT FROM SUMIT SIR >>>> */}
       <Route exact path="/todo" element={<Todo/>}/>  
       </Routes>
-      
+      <div>
+        <Jokes/>
+      </div>
       </div>
    </Router>
 

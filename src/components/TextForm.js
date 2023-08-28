@@ -46,11 +46,11 @@ export default function TextForm(props) {
 <div className="mb-3">
   <textarea className="form-control" value={text} onChange={handelOnChange}  style={{backgroundColor: props.mode === 'dark'? 'grey': 'white', color: props.mode === 'dark'? 'white': 'black' }} id="exampleFormControlTextarea1" rows="8"></textarea>
 </div>
-<button className="btn btn-primary" onClick={handelUpClick}>Convert to uppercase</button>
-<button className="btn btn-primary m-2" onClick={handelDownClick}>Convert to lowercase</button>
-<button className="btn btn-primary m-2" onClick={handelClearClick}>Clear text</button>
-<button className="btn btn-primary m-2" onClick={handelReverseClick}>reverse</button>
-<button className="btn btn-primary " onClick={handelFirstClick}>Sentence case</button>
+<button disabled = {text.length ===0} className="btn btn-primary mx-1 my-1" onClick={handelUpClick}>Convert to uppercase</button>
+<button disabled = {text.length ===0}  className="btn btn-primary mx-2 my-1" onClick={handelReverseClick}>reverse</button>
+<button disabled = {text.length ===0}  className="btn btn-primary mx-2 my-1" onClick={handelClearClick}>Clear text</button>
+<button disabled = {text.length ===0}  className="btn btn-primary mx-2 my-1" onClick={handelDownClick}>Convert to lowercase</button>
+<button disabled = {text.length ===0}  className="btn btn-primary " onClick={handelFirstClick}>Sentence case</button>
 
     </div>
     <div className="container"  style={{color: props.mode === 'dark'? 'white': 'black',}}>
