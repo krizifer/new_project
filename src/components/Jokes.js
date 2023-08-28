@@ -18,6 +18,10 @@ function App() {
         <div>
           <h2>{joke.setup}</h2>
           <p>{joke.punchline}</p>
+
+          <div>
+            <button className='btn btn-Danger'>Random button</button>
+          </div>
         </div>
       )}
     </div>
@@ -25,3 +29,5 @@ function App() {
 }
 
 export default App;
+
+//This is the practice file for hitting an API
