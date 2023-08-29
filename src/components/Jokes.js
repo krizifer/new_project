@@ -12,16 +12,12 @@ function App() {
   return (
     <div>
       <button className='btn btn-success' id="button" onClick={handleClick}>
-        Click me
+        Click me to generate jokes
       </button>
       {joke && (
         <div>
           <h2>{joke.setup}</h2>
           <p>{joke.punchline}</p>
-
-          <div>
-            <button className='btn btn-Danger'>Random button</button>
-          </div>
         </div>
       )}
     </div>

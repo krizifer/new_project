@@ -76,7 +76,7 @@ function App() {
       <Route exact path="/todo" element={<Todo/>}/>  
       </Routes>
       <div>
-        <Jokes/>
+        <Jokes/> 
       </div>
       </div>
    </Router>
